@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         
     }
     
+    
     func setUpCalendarViews(dateSegment: DateSegmentInfo){
         guard let date = dateSegment.monthDates.first?.date else {return}
         
@@ -63,7 +64,7 @@ class ViewController: UIViewController {
     
     func handleCellColour(view: JTAppleCell?, cellState: CellState){
         let todayDate = Date()
-        formatter.dateFormat = "yyyy mm dd"
+        formatter.dateFormat = "yyyy MM dd"
         
         let todayDateString = formatter.string(from: todayDate)
         let monthDateString = formatter.string(from: cellState.date)
@@ -71,12 +72,14 @@ class ViewController: UIViewController {
         guard let validCell = view as? CustomCell else { return }
         
         if todayDateString == monthDateString{
-            validCell.dateLabel.textColor = todayColour
+            validCell.todayView.isHidden = false
         } else if cellState.dateBelongsTo == .thisMonth {
             validCell.dateLabel.textColor = thisMonthColour
+            validCell.todayView.isHidden = true
         } else {
-            validCell.dateLabel.textColor = outsideMonthColour
         }
+
+        
     }
     
     func handleCellSelected(view: JTAppleCell?, cellState: CellState){
@@ -88,6 +91,10 @@ class ViewController: UIViewController {
         } else {
             validCell.selectedView.isHidden = true
         }
+        
+        formatter.dateFormat = "yyyy MM dd"
+        let monthDateString = formatter.string(from: cellState.date)
+        validCell.selectedDateLabel.text = monthDateString
     }
     
     func handleCellVisibility(view: JTAppleCell?, cellState: CellState){
@@ -135,6 +142,7 @@ extension ViewController: JTAppleCalendarViewDataSource, JTAppleCalendarViewDele
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        cell?.bounce()
         handleCellSelected(view: cell, cellState: cellState)
     }
     
@@ -179,4 +187,19 @@ extension UIView {
             layer.borderColor = newValue?.cgColor
         }
     }
+    
+    func bounce() {
+        self.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0,
+            usingSpringWithDamping: 0.3,
+            initialSpringVelocity: 0.1,
+            options: UIViewAnimationOptions.beginFromCurrentState,
+            animations: {
+                self.transform = CGAffineTransform(scaleX: 1, y: 1)
+        })
+    }
+    
+    
 }

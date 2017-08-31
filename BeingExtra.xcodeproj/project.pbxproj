@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		176C56277BF78A6586B14CA0 /* Pods_BeingExtra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADAD9E3A0EB915F2D1D1D565 /* Pods_BeingExtra.framework */; };
 		382198B21F537D1F007BD5D8 /* blocked.png in Resources */ = {isa = PBXBuildFile; fileRef = 382198B11F537D1F007BD5D8 /* blocked.png */; };
+		38BBBD921F5770EB00155614 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BBBD911F5770EB00155614 /* Booking.swift */; };
 		38E01DB91F51D6640046741F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E01DB81F51D6640046741F /* AppDelegate.swift */; };
 		38E01DBB1F51D6640046741F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E01DBA1F51D6640046741F /* ViewController.swift */; };
 		38E01DBE1F51D6640046741F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E01DBC1F51D6640046741F /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		0C597573B2F63B3C09E71483 /* Pods-BeingExtraUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeingExtraUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeingExtraUITests/Pods-BeingExtraUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		33EFCF762AFE7BB19411BE73 /* Pods-BeingExtraUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeingExtraUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeingExtraUITests/Pods-BeingExtraUITests.release.xcconfig"; sourceTree = "<group>"; };
 		382198B11F537D1F007BD5D8 /* blocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blocked.png; sourceTree = SOURCE_ROOT; };
+		38BBBD911F5770EB00155614 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		38E01DB51F51D6640046741F /* BeingExtra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeingExtra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E01DB81F51D6640046741F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38E01DBA1F51D6640046741F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				38E01DB81F51D6640046741F /* AppDelegate.swift */,
+				38BBBD911F5770EB00155614 /* Booking.swift */,
 				38E01DBA1F51D6640046741F /* ViewController.swift */,
 				38E01DBC1F51D6640046741F /* Main.storyboard */,
 				38E01DBF1F51D6640046741F /* Assets.xcassets */,
@@ -465,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BBBD921F5770EB00155614 /* Booking.swift in Sources */,
 				38E01DBB1F51D6640046741F /* ViewController.swift in Sources */,
 				38E01DB91F51D6640046741F /* AppDelegate.swift in Sources */,
 				38E5CE091F52240800C6E64F /* CustomCell.swift in Sources */,
