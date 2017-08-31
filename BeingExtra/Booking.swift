@@ -54,9 +54,9 @@ struct Booking {
         self.isRenting = isRenting ?? "No item rental requested"
     }
     
-    mutating func endOfDay(wraptime: Int, rentalPrice: Double? = nil){
-        wrapTime = wraptime
-        earnedToday = convertToMoneyEarned(from: (wrapTime! - callTime))
+    func endOfDay(wraptime: Int, rentalPrice: Double? = nil){
+        self.wrapTime = wraptime
+        self.earnedToday = convertToMoneyEarned(from: (wrapTime! - callTime))
     }
 
 }
